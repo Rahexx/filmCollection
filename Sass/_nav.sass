@@ -1,0 +1,163 @@
+*
+    padding: 0
+    margin: 0
+    box-sizing: border-box
+    
+    // font-family: 'Mukta Mahee', sans-serif;
+    // #e7a90f
+nav
+    position: fixed
+    left: 0
+    right: 0
+    top: -370px
+    background-color: black
+    transition: .5s linear
+    &.on
+        top: 0    
+    ul
+        margin: 0 auto
+        padding: 24px 0
+        display: flex
+        flex-direction: column
+        width: 60%
+        list-style-type: none
+        li
+            margin: 5px 0
+            text-align: center
+            position: relative
+            a
+                display: block
+                padding: 10px
+                font-size: 20px
+                text-decoration: none
+                color: white
+                text-transform: uppercase
+                &.active
+                    color:#e7a90f
+
+
+a.active::after
+    content: " "
+    position: absolute
+    top: 0
+    right: 0
+    height: 2px
+    width: 100%
+    background-color: #e7a90f
+
+a.active::before
+    content: " "
+    position: absolute
+    bottom: 0
+    left: 0
+    height: 2px
+    width: 100%
+    background-color: #e7a90f
+
+.burger
+    position: fixed
+    top: 20px
+    right: 30px
+    font-size: 25px
+    transition: .3s linear
+    &.on
+        top: 340px
+        right: 30px
+    i.on
+        display: block
+    &:hover
+        cursor: pointer
+
+.fas
+    display: none
+
+.fa-times
+    color:#e7a90f
+
+
+@keyframes zsuwanie
+    0%
+        top: -370px
+    75%
+        top: 30px
+    100%
+        top: 0
+
+
+@media (min-width:375px) and (min-height:812px) and (orientation:portrait)
+    nav
+    ul
+        li
+            a
+                font-size: 26px
+
+@media (min-width:768px) and (min-height:1024px) and (orientation:portrait)
+    nav
+        ul
+            li
+                a
+                    font-size: 34px
+    .burger
+        font-size: 45px
+
+@media (orientation:landscape) 
+    nav
+        ul
+            li
+                a
+                    font-size: 18px
+
+@media (min-width:1024px) and (min-height:768px) and (orientation:landscape)
+    nav
+        ul
+            li
+                a
+                    font-size: 34px
+
+@media (min-width:1366px) and (min-height:1024px) and (orientation:landscape)
+    nav
+        ul
+            li
+                margin-top: 10px 
+                a
+                    font-size: 38px
+
+@media (min-width:1240px)
+    nav
+        ul
+            flex-direction: row
+            margin: 0 auto
+            li
+                overflow: hidden
+                margin: 5px auto  
+                a
+                    font-size: 22px
+                    transition: .5s linear
+                    &::after
+                        top: 0
+                        right: -100%
+                        content: " "
+                        position: absolute
+                        height: 2px
+                        width: 100%
+                        background-color: #e7a90f
+                        transition: .5s
+                    &::before
+                        bottom: 0
+                        left: -100%
+                        content: " "
+                        position: absolute
+                        height: 2px
+                        width: 100%
+                        background-color: #e7a90f
+                        transition: .5s
+                    &:hover::after
+                        top: 0
+                        right: 0
+                    &:hover::before
+                        bottom: 0
+                        left: 0
+                a:hover
+                    color: #e7a90f                   
+                
+                
